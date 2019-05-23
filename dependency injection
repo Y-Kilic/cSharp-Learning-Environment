@@ -1,1 +1,7 @@
-// AutoFac
+//Frameworks
+AutoFac
+
+//Types
+Transient: A separate instance of object for every use.
+Singleton: A single instance of object during application lifecycle.
+Scoped: A single instance of object for each request
