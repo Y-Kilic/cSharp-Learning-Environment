@@ -1,1 +1,58 @@
-.
+Core (Layers) (No dependency on anything)
+(Should not be dependent on infrastructure and persistence.)
+- Domain (Contains Enterprise logic & Types).
+  - Entities (Example EF entity models, User.cs, Order.cs)
+- Application (Business Logic), (Contains Application logic & Types).
+  (Contains interfaces, models, logic, command & queries, validators, exceptions)
+  (Contains ViewModels?)
+
+Outer (Layers) (Dependency on the Core)
+  (Infrastructure and Persistence implement the abstractions and interfaces inside the Core)
+  (Infrastructure and Persistence contain all external concerns)
+  (Presentation and Infrastructure depend only on Application)
+  (Presentation and Infrastructure should not depend on each other)
+- Presentation
+- Persistence
+  (Contains DbContext, Migrations, Configurations, Seeding, Abstractions)
+  - Configurations
+    (Example, UserConfiguration, OrderConfiguration. Contains EntityFramework type configurations to set rules for entities)
+    (See, https://github.com/Y-Kilic/cSharp-Learning-Environment/blob/master/Architecture/files/111111111.png and https://github.com/Y-Kilic/cSharp-Learning-Environment/blob/master/Architecture/files/22222222.png)
+- Infrastructure
+  (Contains implementations: example. API Clients, File System, Email/SMS, System Clock, Anything external. Abstractions and interfaces are located in Core )
+  (Contains classes for accessing external resources, such as file systems, web services, SMTP etc)
+  (No layers depend on infrastructure? eg Presentation layer?)
+  (Implements abstractions/interfaces defined within the Application Layer)
+  (Example, NotificationService, MachineDateTime)
+
+Difference betwheen Domain & Application.
+- (Domain) Enterprise logic could be shared across other applications.
+- (Application) logic would be used in the current application.
+- EXAMPLE classes, Repository inside Persistence and Irepository inside Core
+
+Benefits
+- Independent of frameworks
+- Testable
+- Independent of UI
+- Independent of database
+- Independent of external agency
+
+Folder Structure
+Solution
+- Docs
+- Src
+  - Common
+    - ProjectName.Common
+  - Core
+    - ProjectName.Application
+    - ProjectName.Domain
+  - Infrastructure
+    - ProjectName.Infrastructure
+    - ProjectName.Persistence
+  - Presentation
+    - ProjectName.WebApi
+- Tests
+
+
+Credits to:
+Jason Taylor → https://www.codingflow.net/
+https://www.youtube.com/watch?v=_lwCVE_XgqI
