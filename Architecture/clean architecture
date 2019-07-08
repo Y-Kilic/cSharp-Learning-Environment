@@ -45,6 +45,7 @@ Solution
   - Core
     - ProjectName.Application
     - ProjectName.Domain
+      - Entities
   - Infrastructure
     - ProjectName.Infrastructure
     - ProjectName.Persistence
