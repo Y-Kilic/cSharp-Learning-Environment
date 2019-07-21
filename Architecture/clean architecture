@@ -44,11 +44,13 @@ Solution
     - ProjectName.Common
   - Core
     - ProjectName.Application
+    - ProjectName.Repositories
     - ProjectName.Domain
       - Entities
   - Infrastructure
     - ProjectName.Infrastructure
     - ProjectName.Persistence
+      - Repositories
   - Presentation
     - ProjectName.WebApi
 - Tests
