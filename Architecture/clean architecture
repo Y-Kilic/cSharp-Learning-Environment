@@ -47,7 +47,6 @@ Solution
       - Interfaces
         - Repositories
         - Services
-    - ProjectName.Repositories
     - ProjectName.Domain
       - Entities
   - Infrastructure
