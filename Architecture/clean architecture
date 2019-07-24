@@ -53,6 +53,7 @@ Solution
   - Infrastructure
     - ProjectName.Infrastructure
     - ProjectName.Persistence
+      - Configurations
       - Repositories
   - Presentation
     - ProjectName.WebApi
