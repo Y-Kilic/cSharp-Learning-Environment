@@ -52,8 +52,8 @@ Solution
       - Entities
   - Infrastructure
     - ProjectName.Infrastructure
-      - Services
     - ProjectName.Persistence
+      - Services
       - Configurations
       - Repositories
   - Presentation
