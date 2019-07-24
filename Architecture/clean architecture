@@ -44,6 +44,9 @@ Solution
     - ProjectName.Common
   - Core
     - ProjectName.Application
+      - Interfaces
+        - Repositories
+        - Services
     - ProjectName.Repositories
     - ProjectName.Domain
       - Entities
